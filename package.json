@@ -14,6 +14,11 @@
     "locale"
   ],
   "author": "Alex Havermale (https://github.com/haversnail)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haversnail/inquirer-date-prompt.git"
+  },
+  "homepage": "https://github.com/haversnail/inquirer-date-prompt",
   "engines": {
     "node": ">=10"
   },

@@ -41,7 +41,7 @@ To change the date, simply use the left <kbd>&larr;</kbd> and right <kbd>&rarr;<
 - &plusmn;**100**: Option/Alt + Shift + Arrow (&#8997;&#8679;&darr;)
 
 <p align="center">
-  <img src="examples/demo.gif" alt="Demo" width="480" height="120">
+  <img src="https://raw.githubusercontent.com/haversnail/inquirer-date-prompt/master/examples/demo.gif" alt="Demo" width="480" height="120">
 </p>
 
 ## Options
@@ -66,7 +66,7 @@ To change the date, simply use the left <kbd>&larr;</kbd> and right <kbd>&rarr;<
 - A specific [locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#parameters) or locales to use when formatting the date. If no locale is provided, it will default to the user's current locale.
 
 <p align="center">
-  <img src="examples/locale.gif" alt="Demo" width="480" height="120">
+  <img src="https://raw.githubusercontent.com/haversnail/inquirer-date-prompt/master/examples/locale.gif" alt="Demo" width="480" height="120">
 </p>
 
 ### `format` (Intl.DateTimeFormatOptions)
@@ -101,7 +101,7 @@ async function getTimestamp(date) {
 ```
 
 <p align="center">
-  <img src="examples/end.gif" alt="Demo" width="480" height="120">
+  <img src="https://raw.githubusercontent.com/haversnail/inquirer-date-prompt/master/examples/end.gif" alt="Demo" width="480" height="120">
 </p>
 
 ## Caveats
