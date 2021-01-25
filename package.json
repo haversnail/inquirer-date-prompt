@@ -1,0 +1,24 @@
+{
+  "name": "inquirer-date-prompt",
+  "version": "0.1.0",
+  "description": "A date prompt plugin for Inquirer.js.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "keywords": [
+    "inquirer",
+    "date",
+    "time",
+    "picker",
+    "prompt",
+    "plugin",
+    "locale"
+  ],
+  "author": "Alex Havermale (https://github.com/haversnail)",
+  "engines": {
+    "node": ">=10"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "inquirer": "7.x"
+  }
+}
