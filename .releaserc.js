@@ -8,12 +8,12 @@ module.exports = {
     ["@semantic-release/release-notes-generator", {
       preset: "angular",
     }],
+    "@semantic-release/github",
+    "@semantic-release/npm",
     // prettier-ignore
     ["@semantic-release/git", {
       assets: ["package.json", "package-lock.json"],
       message: "build(Release): bump version to ${nextRelease.version}",
     }],
-    "@semantic-release/github",
-    "@semantic-release/npm",
   ],
 };
