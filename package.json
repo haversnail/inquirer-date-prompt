@@ -25,5 +25,11 @@
   "license": "MIT",
   "peerDependencies": {
     "inquirer": "7.x"
+  },
+  "devDependencies": {
+    "semantic-release": "^17.4.1"
+  },
+  "scripts": {
+    "release": "semantic-release"
   }
 }
