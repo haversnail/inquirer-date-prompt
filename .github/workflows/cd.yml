@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  workflow_dispatch: # Allows workflow to be triggered manually
+  push:
+    branches:
+      - master
+
+env:
+  NODE_VERSION: "12"
+
+jobs:
+  release:
+    name: Release & Publish Package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Release & Publish
+        run: npm run release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
