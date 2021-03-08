@@ -68,7 +68,7 @@ class DatePrompt extends Prompt {
     // Set the first and last indices of the editable date parts:
     this.firstEditableIndex = this.dateParts.findIndex((part) => editableTypes.includes(part.type));
     this.lastEditableIndex = findLastIndex(this.dateParts, (part) => editableTypes.includes(part.type));
-    // Set the cursor index to the first editable part"
+    // Set the cursor index to the first editable part:
     this.cursorIndex = this.firstEditableIndex;
   }
 
@@ -115,8 +115,9 @@ class DatePrompt extends Prompt {
         .join("");
 
       // Apply the transformer function if one was provided:
-      const transformer = this.opt.transformer;
-      message += !transformer ? dateString : transformer(dateString, this.answers, { isDirty, isCleared, isFinal });
+      message += this.opt.transformer
+        ? this.opt.transformer(dateString, this.answers, { isDirty, isCleared, isFinal })
+        : dateString;
 
       // Display info on how to clear if the prompt is clearable:
       if (this.opt.clearable && !isFinal) {
@@ -199,7 +200,7 @@ class DatePrompt extends Prompt {
    * @param {number} offset
    */
   shiftDatePartValue(offset = 0) {
-    // Set the input as "dirty" now the initial date is being changed:
+    // Set the input as "dirty" now that the initial date is being changed:
     this.isDirty = true;
     const { type } = this.currentDatePart;
     if (fnLookup[type]) {
