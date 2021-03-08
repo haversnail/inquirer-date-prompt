@@ -246,10 +246,10 @@ class DatePrompt extends Prompt {
           this.decrementCursorIndex();
         } while (this.isCurrentDatePartEditable); // decrements the cursor index until it hits an editable value
         break;
-      case "down":
+      case "up":
         this.incrementDatePartValueBy(amount);
         break;
-      case "up":
+      case "down":
         this.decrementDatePartValueBy(amount);
         break;
       case "delete":
