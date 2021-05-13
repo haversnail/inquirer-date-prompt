@@ -24,7 +24,7 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "inquirer": "7.x"
+    "inquirer": ">= 7.x"
   },
   "devDependencies": {
     "@semantic-release/git": "^9.0.0",
