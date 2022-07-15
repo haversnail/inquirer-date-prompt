@@ -14,6 +14,8 @@ A comprehensive date prompt plugin for Inquirer.js.
 
 ## Installation
 
+**Note:** v3 is pure ESM. If you want to use the package with CommonJS, you may want to use v2. [Read more here](https://nodejs.org/api/esm.html#modules-ecmascript-modules).
+
 ```sh
 npm install inquirer-date-prompt
 ```
@@ -106,4 +108,4 @@ async function getTimestamp(date) {
 
 ## Caveats
 
-1. Be aware that even though this plugin works with Node &ge; v10, specifying a locale other than `'en-US'` while running on any version less than 13.0.0 will fail silently. See the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#browser_compatibility) for more details.
+1. Be aware that even though this plugin works with Node &ge; v12, specifying a locale other than `'en-US'` while running on any version less than 13.0.0 will fail silently. See the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#browser_compatibility) for more details.

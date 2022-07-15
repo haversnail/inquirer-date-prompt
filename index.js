@@ -1,8 +1,8 @@
-const chalk = require("chalk");
-const cliCursor = require("cli-cursor");
-const Prompt = require("inquirer/lib/prompts/base");
-const observe = require("inquirer/lib/utils/events");
-const { map, takeUntil } = require("rxjs/operators");
+import chalk from "chalk";
+import cliCursor from "cli-cursor";
+import Prompt from "inquirer/lib/prompts/base.js";
+import observe from "inquirer/lib/utils/events.js";
+import { map, takeUntil } from "rxjs/operators";
 
 /**
  * A lookup object that maps each date part type to the corresponding
@@ -32,7 +32,9 @@ const editableTypes = Object.keys(fnLookup);
 const findLastIndex = function findLastIndex(array, predicate) {
   let l = array.length;
   while (l--) {
-    if (predicate(array[l], l, array)) return l;
+    if (predicate(array[l], l, array)) {
+      return l;
+    }
   }
   return -1;
 };
@@ -133,7 +135,7 @@ class DatePrompt extends Prompt {
 
   /**
    * The end event handler.
-   * @param {import('inquirer').prompts.SuccessfulPromptStateData<Date | null>} state
+   * @param {import("inquirer").prompts.SuccessfulPromptStateData<Date | null>} state
    */
   onEnd({ value }) {
     this.answer = value;
@@ -149,7 +151,7 @@ class DatePrompt extends Prompt {
 
   /**
    * The error event handler.
-   * @param {import('inquirer').prompts.FailedPromptStateData} state
+   * @param {import("inquirer").prompts.FailedPromptStateData} state
    */
   onError({ isValid }) {
     this.render(isValid);
@@ -226,12 +228,14 @@ class DatePrompt extends Prompt {
 
   /**
    * The keypress event handler.
-   * @typedef {{ key: import('readline').Key, value?: string }} KeyDescriptor
+   * @typedef {{ key: import("readline").Key, value?: string }} KeyDescriptor
    * @param {KeyDescriptor} descriptor
    */
   onKeypress({ key }) {
     // Reset cleared state if any other key is pressed:
-    if (this.isCleared) this.isCleared = false;
+    if (this.isCleared) {
+      this.isCleared = false;
+    }
     // Calculate the amount to increment/decrement by based on modifiers:
     const amount = key.shift ? (key.meta ? 100 : 10) : 1;
 
@@ -254,7 +258,9 @@ class DatePrompt extends Prompt {
         break;
       case "delete":
       case "backspace":
-        if (this.opt.clearable) this.isCleared = true;
+        if (this.opt.clearable) {
+          this.isCleared = true;
+        }
         break;
     }
 
@@ -262,4 +268,4 @@ class DatePrompt extends Prompt {
   }
 }
 
-module.exports = DatePrompt;
+export default DatePrompt;

@@ -3,4 +3,4 @@ examples
 .vscode
 .editorconfig
 .prettierrc.json
-.releaserc.js
+.releaserc.mjs
