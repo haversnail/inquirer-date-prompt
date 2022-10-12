@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   plugins: [
     // prettier-ignore
     ["@semantic-release/commit-analyzer", {
