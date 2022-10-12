@@ -18,7 +18,7 @@ A comprehensive date prompt plugin for Inquirer.js.
 npm install inquirer-date-prompt
 ```
 
-> :warning: Note that the latest version of this package uses native ESM modules, which means this plugin will only work with inquirer `v9` and above. If you cannot use ESM modules yet for whatever reason, you can rely on `v2.x` until you're ready to upgrade your environment:
+> :warning: Note that the latest version of this package uses native ES modules, which means this plugin will only work with inquirer `v9` and above. If you cannot use ES modules yet for whatever reason, you can rely on `v2.x` until you're ready to upgrade your environment:
 >
 > ```sh
 > npm install --save inquirer-date-prompt@^2.0.0
