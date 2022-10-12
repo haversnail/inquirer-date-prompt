@@ -1,6 +1,6 @@
 {
   "name": "inquirer-date-prompt",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "A date prompt plugin for Inquirer.js.",
   "type": "module",
   "main": "index.js",
