@@ -1,8 +1,8 @@
-const chalk = require("chalk");
-const cliCursor = require("cli-cursor");
-const Prompt = require("inquirer/lib/prompts/base");
-const observe = require("inquirer/lib/utils/events");
-const { map, takeUntil } = require("rxjs/operators");
+import chalk from "chalk";
+import cliCursor from "cli-cursor";
+import Prompt from "inquirer/lib/prompts/base.js";
+import observe from "inquirer/lib/utils/events.js";
+import { map, takeUntil } from "rxjs/operators";
 
 /**
  * A lookup object that maps each date part type to the corresponding
@@ -262,4 +262,4 @@ class DatePrompt extends Prompt {
   }
 }
 
-module.exports = DatePrompt;
+export default DatePrompt;

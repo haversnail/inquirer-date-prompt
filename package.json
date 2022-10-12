@@ -2,6 +2,7 @@
   "name": "inquirer-date-prompt",
   "version": "2.0.1",
   "description": "A date prompt plugin for Inquirer.js.",
+  "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
   "keywords": [
@@ -20,11 +21,11 @@
   },
   "homepage": "https://github.com/haversnail/inquirer-date-prompt",
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "license": "MIT",
   "peerDependencies": {
-    "inquirer": ">= 7.x"
+    "inquirer": ">= 9.x"
   },
   "devDependencies": {
     "@semantic-release/git": "^9.0.0",
